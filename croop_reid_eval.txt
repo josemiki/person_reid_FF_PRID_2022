@@ -1,0 +1,7 @@
+conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch -c nvidia
+
+cd Final_FFPRID
+
+python run.py --mode=data --data_dir=data --p_name=RW-01-predict
+python run.py --mode=val --data_dir=data --p_name=RW-01-predict  
+python run.py --mode=graph --data_dir=data --p_name=RW-01-predict

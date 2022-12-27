@@ -1,0 +1,11 @@
+_BASE_: ../Base-MGN.yml
+
+MODEL:
+  BACKBONE:
+    WITH_IBN: True
+
+DATASETS:
+  NAMES: ("CUHK03","Market1501",)
+  TESTS: ("CUHK03",)
+
+OUTPUT_DIR: logs/cuhk+market/mgn_R50-ibn
