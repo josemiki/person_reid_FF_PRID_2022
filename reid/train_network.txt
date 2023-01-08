@@ -1,0 +1,198 @@
+-----> TRAIN BASE MARKET - CUHK - DUKE
+python tools/train_net.py --config-file ./configs/Market1501/bagtricks_R50.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/Market1501/mgn_R50-ibn.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/Market1501/AGW_R50.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/Market1501/sbs_R50-ibn.yml MODEL.DEVICE "cuda:0"
+
+python tools/train_net.py --config-file ./configs/DukeMTMC/bagtricks_R50.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/DukeMTMC/mgn_R50-ibn.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/DukeMTMC/AGW_R50.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/DukeMTMC/sbs_R50-ibn.yml MODEL.DEVICE "cuda:0"
+
+python tools/train_net.py --config-file ./configs/CUHK03/bagtricks_R50.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/CUHK03/mgn_R50-ibn.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/CUHK03/AGW_R50.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/CUHK03/sbs_R50-ibn.yml MODEL.DEVICE "cuda:0"
+
+-----> TRAIN CROSS PAIR MARKET - CUHK - DUKE
+
+python tools/train_net.py --config-file ./configs/Market+Duke/bagtricks_R50.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/Market+Duke/mgn_R50-ibn.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/Market+Duke/AGW_R50.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/Market+Duke/sbs_R50-ibn.yml MODEL.DEVICE "cuda:0"
+
+python tools/train_net.py --config-file ./configs/Duke+CUHK/bagtricks_R50.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/Duke+CUHK/mgn_R50-ibn.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/Duke+CUHK/AGW_R50.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/Duke+CUHK/sbs_R50-ibn.yml MODEL.DEVICE "cuda:0"
+
+python tools/train_net.py --config-file ./configs/CUHK+Market/bagtricks_R50.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/CUHK+Market/mgn_R50-ibn.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/CUHK+Market/AGW_R50.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/CUHK+Market/sbs_R50-ibn.yml MODEL.DEVICE "cuda:0"
+
+-----> TRAIN CROSS FULL MARKET - CUHK - DUKE
+
+python tools/train_net.py --config-file ./configs/Market+Duke+CUHK/bagtricks_R50.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/Market+Duke+CUHK/mgn_R50-ibn.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/Market+Duke+CUHK/AGW_R50.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/Market+Duke+CUHK/sbs_R50-ibn.yml MODEL.DEVICE "cuda:0"
+
+
+-----> TRAIN SCALED CROSS PAIR MARKET - CUHK - DUKE
+
+python tools/train_net.py --config-file ./configs/scaled_Market+Duke/AGW_R50.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/scaled_Market+Duke/mgn_R50-ibn.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/scaled_Market+Duke/sbs_R50.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/scaled_Market+Duke/bagtricks_R50.yml MODEL.DEVICE "cuda:0"
+
+python tools/train_net.py --config-file ./configs/scaled_Duke+CUHK/AGW_R50.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/scaled_Duke+CUHK/mgn_R50-ibn.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/scaled_Duke+CUHK/sbs_R50.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/scaled_Duke+CUHK/bagtricks_R50.yml MODEL.DEVICE "cuda:0"
+
+python tools/train_net.py --config-file ./configs/scaled_CUHK+Market/AGW_R50.ymlcuda:0"
+python tools/train_net.py --config-file ./configs/scaled_CUHK+Market/mgn_R50-ibn.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/scaled_CUHK+Market/sbs_R50.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/scaled_CUHK+Market/bagtricks_R50.yml MODEL.DEVICE "cuda:0"
+
+-----> TRAIN SCALED CROSS FULL MARKET - CUHK - DUKE
+
+python tools/train_net.py --config-file ./configs/scaled_Market+Duke+CUHK/AGW_R50.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/scaled_Market+Duke+CUHK/mgn_R50-ibn.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/scaled_Market+Duke+CUHK/sbs_R50.yml MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/scaled_Market+Duke+CUHK/bagtricks_R50.yml MODEL.DEVICE "cuda:0"
+
+
+-----> EVALUATION CROSS SIMPLE (MARKET - CUHK - DUKE)-> PRID
+
+python tools/train_net.py --config-file ./configs/PRID/AGW_R50.yml --eval-only MODEL.WEIGHTS logs/market1501/agw_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/AGW_R50.yml --eval-only MODEL.WEIGHTS logs/cuhk03/agw_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/AGW_R50.yml --eval-only MODEL.WEIGHTS logs/dukemtmc/agw_R50/model_final.pth MODEL.DEVICE "cud
+
+python tools/train_net.py --config-file ./configs/PRID/mgn_R50-ibn.yml --eval-only MODEL.WEIGHTS logs/cuhk03/mgn_R50-ibn/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/mgn_R50-ibn.yml --eval-only MODEL.WEIGHTS logs/dukemtmc/mgn_R50-ibn/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/mgn_R50-ibn.yml --eval-only MODEL.WEIGHTS logs/market1501/mgn_R50-ibn/model_final.pth MODEL.DEVICE "cud
+
+python tools/train_net.py --config-file ./configs/PRID/sbs_R50.yml --eval-only MODEL.WEIGHTS logs/cuhk03/sbs_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/sbs_R50.yml --eval-only MODEL.WEIGHTS logs/dukemtmc/sbs_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/sbs_R50.yml --eval-only MODEL.WEIGHTS logs/market1501/sbs_R50/model_final.pth MODEL.DEVICE "cud
+
+python tools/train_net.py --config-file ./configs/PRID/bagtricks_R50.yml --eval-only MODEL.WEIGHTS logs/cuhk03/bagtricks_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/bagtricks_R50.yml --eval-only MODEL.WEIGHTS logs/dukemtmc/bagtricks_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/bagtricks_R50.yml --eval-only MODEL.WEIGHTS logs/market1501/bagtricks_R50/model_final.pth MODEL.DEVICE "cud
+
+-----> EVALUATION CROSS COMBINED ALL(MARKET - CUHK - DUKE)-> PRID
+
+python tools/train_net.py --config-file ./configs/Market1501/AGW_R50.yml --eval-only MODEL.WEIGHTS logs/market+duke+cuhk/agw_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/DukeMTMC/AGW_R50.yml --eval-only MODEL.WEIGHTS logs/market+duke+cuhk/agw_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/CUHK03/AGW_R50.yml --eval-only MODEL.WEIGHTS logs/market+duke+cuhk/agw_R50/model_final.pth MODEL.DEVICE "cu
+
+python tools/train_net.py --config-file ./configs/Market1501/mgn_R50-ibn.yml --eval-only MODEL.WEIGHTS logs/market+duke+cuhk/mgn_R50-ibn/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/DukeMTMC/mgn_R50-ibn.yml --eval-only MODEL.WEIGHTS logs/market+duke+cuhk/mgn_R50-ibn/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/CUHK03/mgn_R50-ibn.yml --eval-only MODEL.WEIGHTS logs/market+duke+cuhk/mgn_R50-ibn/model_final.pth MODEL.DEVICE "cu
+
+python tools/train_net.py --config-file ./configs/Market1501/sbs_R50.yml --eval-only MODEL.WEIGHTS logs/market+duke+cuhk/sbs_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/DukeMTMC/sbs_R50.yml --eval-only MODEL.WEIGHTS logs/market+duke+cuhk/sbs_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/CUHK03/sbs_R50.yml --eval-only MODEL.WEIGHTS logs/market+duke+cuhk/sbs_R50/model_final.pth MODEL.DEVICE "cu
+
+python tools/train_net.py --config-file ./configs/Market1501/bagtricks_R50.yml --eval-only MODEL.WEIGHTS logs/market+duke+cuhk/bagtricks_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/DukeMTMC/bagtricks_R50.yml --eval-only MODEL.WEIGHTS logs/market+duke+cuhk/bagtricks_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/CUHK03/bagtricks_R50.yml --eval-only MODEL.WEIGHTS logs/market+duke+cuhk/bagtricks_R50/model_final.pth MODEL.DEVICE "cuda:0"
+
+python tools/train_net.py --config-file ./configs/PRID/AGW_R50.yml --eval-only MODEL.WEIGHTS logs/market+duke+cuhk/agw_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/mgn_R50-ibn.yml --eval-only MODEL.WEIGHTS logs/market+duke+cuhk/mgn_R50-ibn/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/sbs_R50.yml --eval-only MODEL.WEIGHTS logs/market+duke+cuhk/sbs_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/bagtricks_R50.yml --eval-only MODEL.WEIGHTS logs/market+duke+cuhk/bagtricks_R50/model_final.pth MODEL.DEVICE "cuda:0"
+
+-----> EVALUATION CROSS COMBINED_OTHERS PAIRS MARKET - CUHK - DUKE
+
+python tools/train_net.py --config-file ./configs/CUHK03/AGW_R50.yml --eval-only MODEL.WEIGHTS logs/market+duke/agw_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/CUHK03/mgn_R50-ibn.yml --eval-only MODEL.WEIGHTS logs/market+duke/mgn_R50-ibn/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/CUHK03/sbs_R50.yml --eval-only MODEL.WEIGHTS logs/market+duke/sbs_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/CUHK03/bagtricks_R50.yml --eval-only MODEL.WEIGHTS logs/market+duke/bagtricks_R50/model_final.pth MODEL.DEVICE "cuda:0"
+
+python tools/train_net.py --config-file ./configs/DukeMTMC/AGW_R50.yml --eval-only MODEL.WEIGHTS logs/cuhk+market/agw_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/DukeMTMC/mgn_R50-ibn.yml --eval-only MODEL.WEIGHTS logs/cuhk+market/mgn_R50-ibn/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/DukeMTMC/sbs_R50.yml --eval-only MODEL.WEIGHTS logs/cuhk+market/sbs_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/DukeMTMC/bagtricks_R50.yml --eval-only MODEL.WEIGHTS logs/cuhk+market/bagtricks_R50/model_final.pth MODEL.DEVICE "cuda:0"
+
+python tools/train_net.py --config-file ./configs/Market1501/AGW_R50.yml --eval-only MODEL.WEIGHTS logs/duke+cuhk/agw_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/Market1501/mgn_R50-ibn.yml --eval-only MODEL.WEIGHTS logs/duke+cuhk/mgn_R50-ibn/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/Market1501/sbs_R50.yml --eval-only MODEL.WEIGHTS logs/duke+cuhk/sbs_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/Market1501/bagtricks_R50.yml --eval-only MODEL.WEIGHTS logs/duke+cuhk/bagtricks_R50/model_final.pth MODEL.DEVICE "cuda:0"
+
+python tools/train_net.py --config-file ./configs/PRID/AGW_R50.yml --eval-only MODEL.WEIGHTS logs/market+duke/agw_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/mgn_R50-ibn.yml --eval-only MODEL.WEIGHTS logs/market+duke/mgn_R50-ibn/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/sbs_R50.yml --eval-only MODEL.WEIGHTS logs/market+duke/sbs_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/bagtricks_R50.yml --eval-only MODEL.WEIGHTS logs/market+duke/bagtricks_R50/model_final.pth MODEL.DEVICE "cud
+
+python tools/train_net.py --config-file ./configs/PRID/AGW_R50.yml --eval-only MODEL.WEIGHTS logs/cuhk+market/agw_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/mgn_R50-ibn.yml --eval-only MODEL.WEIGHTS logs/cuhk+market/mgn_R50-ibn/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/sbs_R50.yml --eval-only MODEL.WEIGHTS logs/cuhk+market/sbs_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/bagtricks_R50.yml --eval-only MODEL.WEIGHTS logs/cuhk+market/bagtricks_R50/model_final.pth MODEL.DEVICE "cud
+
+python tools/train_net.py --config-file ./configs/PRID/AGW_R50.yml --eval-only MODEL.WEIGHTS logs/duke+cuhk/agw_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/mgn_R50-ibn.yml --eval-only MODEL.WEIGHTS logs/duke+cuhk/mgn_R50-ibn/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/sbs_R50.yml --eval-only MODEL.WEIGHTS logs/duke+cuhk/sbs_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/bagtricks_R50.yml --eval-only MODEL.WEIGHTS logs/duke+cuhk/bagtricks_R50/model_final.pth MODEL.DEVICE "cuda:0"
+
+
+-----> EVALUATION CROSS COMBINED ALL SCALED(MARKET - CUHK - DUKE)-> PRID
+
+python tools/train_net.py --config-file ./configs/PRID/AGW_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_market+duke+cuhk/agw_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/mgn_R50-ibn.yml --eval-only MODEL.WEIGHTS logs/scaled_market+duke+cuhk/mgn_R50-ibn/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/sbs_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_market+duke+cuhk/sbs_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/bagtricks_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_market+duke+cuhk/bagtricks_R50/model_final.pth MODEL.DEVICE "cuda:0"
+
+python tools/train_net.py --config-file ./configs/CUHK03/AGW_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_market+duke+cuhk/agw_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/CUHK03/mgn_R50-ibn.yml --eval-only MODEL.WEIGHTS logs/scaled_market+duke+cuhk/mgn_R50-ibn/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/CUHK03/sbs_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_market+duke+cuhk/sbs_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/CUHK03/bagtricks_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_market+duke+cuhk/bagtricks_R50/model_final.pth MODEL.DEVICE "cuda:0"
+
+python tools/train_net.py --config-file ./configs/DukeMTMC/AGW_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_market+duke+cuhk/agw_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/DukeMTMC/mgn_R50-ibn.yml --eval-only MODEL.WEIGHTS logs/scaled_market+duke+cuhk/mgn_R50-ibn/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/DukeMTMC/sbs_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_market+duke+cuhk/sbs_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/DukeMTMC/bagtricks_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_market+duke+cuhk/bagtricks_R50/model_final.pth MODEL.DEVICE "cuda:0"
+
+python tools/train_net.py --config-file ./configs/Market1501/AGW_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_market+duke+cuhk/agw_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/Market1501/mgn_R50-ibn.yml --eval-only MODEL.WEIGHTS logs/scaled_market+duke+cuhk/mgn_R50-ibn/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/Market1501/sbs_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_market+duke+cuhk/sbs_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/Market1501/bagtricks_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_market+duke+cuhk/bagtricks_R50/model_final.pth MODEL.DEVICE "cuda:0"
+
+-----> EVALUATION CROSS COMBINED_OTHERS PAIRS SCALED MARKET - CUHK - DUKE
+
+python tools/train_net.py --config-file ./configs/DukeMTMC/AGW_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_cuhk+market/agw_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/DukeMTMC/mgn_R50-ibn.yml --eval-only MODEL.WEIGHTS logs/scaled_cuhk+market/mgn_R50-ibn/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/DukeMTMC/sbs_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_cuhk+market/sbs_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/DukeMTMC/bagtricks_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_cuhk+market/bagtricks_R50/model_final.pth MODEL.DEVICE "cuda:0"
+
+python tools/train_net.py --config-file ./configs/CUHK03/AGW_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_market+duke/agw_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/CUHK03/mgn_R50-ibn.yml --eval-only MODEL.WEIGHTS logs/scaled_market+duke/mgn_R50-ibn/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/CUHK03/sbs_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_market+duke/sbs_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/CUHK03/bagtricks_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_market+duke/bagtricks_R50/model_final.pth MODEL.DEVICE "cuda:0"
+
+python tools/train_net.py --config-file ./configs/Market1501/AGW_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_duke+cuhk/agw_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/Market1501/mgn_R50-ibn.yml --eval-only MODEL.WEIGHTS logs/scaled_duke+cuhk/mgn_R50-ibn/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/Market1501/sbs_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_duke+cuhk/sbs_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/Market1501/bagtricks_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_duke+cuhk/bagtricks_R50/model_final.pth MODEL.DEVICE "cuda:0"
+
+python tools/train_net.py --config-file ./configs/PRID/AGW_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_market+duke/agw_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/mgn_R50-ibn.yml --eval-only MODEL.WEIGHTS logs/scaled_market+duke/mgn_R50-ibn/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/sbs_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_market+duke/sbs_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/bagtricks_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_market+duke/bagtricks_R50/model_final.pth MODEL.DEVICE "cuda:0"
+
+python tools/train_net.py --config-file ./configs/PRID/AGW_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_cuhk+market/agw_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/mgn_R50-ibn.yml --eval-only MODEL.WEIGHTS logs/scaled_cuhk+market/mgn_R50-ibn/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/bagtricks_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_cuhk+market/bagtricks_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/AGW_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_duke+cuhk/agw_R50/model_final.pth MODEL.DEVICE "cuda:0"
+
+python tools/train_net.py --config-file ./configs/PRID/mgn_R50-ibn.yml --eval-only MODEL.WEIGHTS logs/scaled_duke+cuhk/mgn_R50-ibn/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/sbs_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_cuhk+market/sbs_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/sbs_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_duke+cuhk/sbs_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/bagtricks_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_duke+cuhk/bagtricks_R50/model_final.pth MODEL.DEVICE "cuda:0"
+
+python tools/train_net.py --config-file ./configs/PRID/AGW_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_market+duke+cuhk/agw_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/mgn_R50-ibn.yml --eval-only MODEL.WEIGHTS logs/scaled_market+duke+cuhk/mgn_R50-ibn/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/sbs_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_market+duke+cuhk/sbs_R50/model_final.pth MODEL.DEVICE "cuda:0"
+python tools/train_net.py --config-file ./configs/PRID/bagtricks_R50.yml --eval-only MODEL.WEIGHTS logs/scaled_market+duke+cuhk/bagtricks_R50/model_final.pth MODEL.DEVICE "cuda:0"

@@ -1,0 +1,11 @@
+_BASE_: ../Base-MGN.yml
+
+MODEL:
+  BACKBONE:
+    WITH_IBN: True
+
+DATASETS:
+  NAMES: ("Market1501","DukeMTMC",)
+  TESTS: ("Market1501",)
+
+OUTPUT_DIR: logs/scaled_market+duke/mgn_R50-ibn

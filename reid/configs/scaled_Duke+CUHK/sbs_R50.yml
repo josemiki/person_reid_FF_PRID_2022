@@ -1,0 +1,7 @@
+_BASE_: ../Base-SBS.yml
+
+DATASETS:
+  NAMES: ("DukeMTMC","CUHK03")
+  TESTS: ("DukeMTMC",)
+
+OUTPUT_DIR: logs/scaled_duke+cuhk/sbs_R50

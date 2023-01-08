@@ -1,0 +1,7 @@
+_BASE_: ../Base-AGW.yml
+
+DATASETS:
+  NAMES: ("Market1501","DukeMTMC","CUHK03")
+  TESTS: ("Market1501",)
+
+OUTPUT_DIR: logs/scaled_market+duke+cuhk/agw_R50

@@ -1,0 +1,11 @@
+_BASE_: ../Base-MGN.yml
+
+MODEL:
+  BACKBONE:
+    WITH_IBN: True
+
+DATASETS:
+  NAMES: ("PRID",)
+  TESTS: ("PRID",)
+
+OUTPUT_DIR: logs/prid/mgn_R50-ibn
