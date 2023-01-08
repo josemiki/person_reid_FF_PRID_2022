@@ -1,7 +1,0 @@
-_BASE_: ../Base-SBS.yml
-
-DATASETS:
-  NAMES: ("CUHK03","Market1501",)
-  TESTS: ("CUHK03",)
-
-OUTPUT_DIR: logs/cuhk+market/sbs_R50

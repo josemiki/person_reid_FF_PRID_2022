@@ -1,7 +1,0 @@
-_BASE_: ../Base-AGW.yml
-
-DATASETS:
-  NAMES: ("PRID",)
-  TESTS: ("PRID",)
-
-OUTPUT_DIR: logs/prid/agw_R50

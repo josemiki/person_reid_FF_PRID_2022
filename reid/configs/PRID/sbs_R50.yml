@@ -1,7 +1,0 @@
-_BASE_: ../Base-SBS.yml
-
-DATASETS:
-  NAMES: ("PRID",)
-  TESTS: ("PRID",)
-
-OUTPUT_DIR: logs/prid/sbs_R50

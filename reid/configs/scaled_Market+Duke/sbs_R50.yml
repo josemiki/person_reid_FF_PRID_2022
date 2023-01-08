@@ -1,7 +1,0 @@
-_BASE_: ../Base-SBS.yml
-
-DATASETS:
-  NAMES: ("Market1501","DukeMTMC",)
-  TESTS: ("Market1501",)
-
-OUTPUT_DIR: logs/scaled_market+duke/sbs_R50

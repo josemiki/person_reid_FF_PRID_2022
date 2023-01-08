@@ -1,7 +1,0 @@
-_BASE_: ../Base-bagtricks.yml
-
-DATASETS:
-  NAMES: ("PRID",)
-  TESTS: ("PRID",)
-
-OUTPUT_DIR: logs/prid/bagtricks_R50
